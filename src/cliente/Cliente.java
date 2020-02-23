@@ -15,9 +15,7 @@ public class Cliente {
 		frame.setVisible(true);
 		
 		
-	//c.register();
-		
-		//Pruebas
+	
 		try {
 			System.out.println("'Hola' a mayusculas: " + c.toMayus("hola"));
 			System.out.println("'Hola' a minusculas: "+c.toMinus("Hola"));
@@ -58,7 +56,7 @@ public class Cliente {
 	}
 	public void register() {
 		try {
-			Registry registry = LocateRegistry.getRegistry("localhost", 420);
+			Registry registry = LocateRegistry.getRegistry("localhost", 420); 
 			useless = (RMIInterface) registry.lookup("useless");
 		} catch (Exception e) {
 			System.out.println("!! Error");
